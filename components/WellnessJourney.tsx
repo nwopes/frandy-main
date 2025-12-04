@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeIn from "./FadeIn";
 
 export default function WellnessJourney() {
@@ -7,19 +8,17 @@ export default function WellnessJourney() {
         <section className="bg-[var(--background)] overflow-hidden">
             <div className="flex flex-col lg:flex-row min-h-[600px]">
 
-                {/* Left Side - Image Placeholder */}
-                <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full bg-gradient-to-br from-purple-900 via-pink-900 to-[#13111C]">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        {/* Placeholder for Sunset Yoga Image */}
-                        <div className="text-center p-8">
-                            <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                                <span className="text-4xl">🧘‍♀️</span>
-                            </div>
-                            <p className="text-white/50 text-sm uppercase tracking-widest">Wellness Journey Image</p>
-                        </div>
-                    </div>
+                {/* Left Side - Image */}
+                <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+                    <Image
+                        src="/wellness_journey_image.png"
+                        alt="Wellness Journey"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
                     {/* Overlay Gradient to blend with content */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--background)]/50 lg:to-[var(--background)]"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--background)]/80 lg:to-[var(--background)]"></div>
                 </div>
 
                 {/* Right Side - Content */}

@@ -4,12 +4,12 @@ import FadeIn from "./FadeIn";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="bg-[var(--background)] py-12 md:py-24 overflow-hidden">
+        <section id="about" className="bg-[var(--background)] py-12 md:py-16 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Headline */}
                 <FadeIn direction="up">
-                    <div className="text-center mb-12 md:mb-20">
+                    <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-6xl font-black text-white mb-8 leading-tight">
                             All of the Nutrient. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gummy-red to-gummy-blue">None of the Spike.</span>
@@ -19,7 +19,7 @@ export default function AboutSection() {
 
                 {/* Who We Are */}
                 <FadeIn direction="up" delay={0.1}>
-                    <div className="max-w-3xl mx-auto text-center mb-24">
+                    <div className="max-w-3xl mx-auto text-center mb-12">
                         <h3 className="text-2xl font-bold text-white mb-4">Who We Are</h3>
                         <p className="text-xl text-gray-400 leading-relaxed">
                             Frandy is the breakthrough in nutritional supplements you’ve been waiting for. We are a wellness brand designed for the modern, health-conscious consumer who demands more from their vitamins.
