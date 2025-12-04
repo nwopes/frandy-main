@@ -18,7 +18,7 @@ export default function Hero() {
                 </svg>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 md:pt-0">
                 <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
 
                     {/* Left Content */}
@@ -52,25 +52,25 @@ export default function Hero() {
 
                     {/* Right Image Placeholder */}
                     <div className="mt-16 lg:mt-0 lg:col-span-6 relative flex justify-center">
-                        {/* Floating Elements */}
+                        {/* Floating Elements - Hidden on mobile */}
                         <motion.div
                             animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute top-0 left-10"
+                            className="hidden md:block absolute top-0 left-10"
                         >
                             <span className="text-4xl">🍓</span>
                         </motion.div>
                         <motion.div
                             animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="absolute bottom-20 right-20"
+                            className="hidden md:block absolute bottom-20 right-20"
                         >
                             <span className="text-4xl">🫐</span>
                         </motion.div>
                         <motion.div
                             animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute top-1/2 right-0"
+                            className="hidden md:block absolute top-1/2 right-0"
                         >
                             <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         </motion.div>

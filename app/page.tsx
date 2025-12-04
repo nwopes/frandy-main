@@ -8,6 +8,8 @@ import WhyChooseFrandy from "@/components/WhyChooseFrandy";
 import NutritionInfo from "@/components/NutritionInfo";
 
 import BoostHealth from "@/components/BoostHealth";
+import WellnessJourney from "@/components/WellnessJourney";
+import AboutSection from "@/components/AboutSection";
 
 export default async function Home() {
   let products = [];
@@ -30,9 +32,11 @@ export default async function Home() {
         </div>
       )}
 
+      <AboutSection />
       <WhyChooseFrandy />
       <BoostHealth />
       <NutritionInfo />
+      <WellnessJourney />
 
       <Footer />
     </main>
