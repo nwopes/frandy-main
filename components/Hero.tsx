@@ -26,7 +26,7 @@ export default function Hero() {
                             </div> */}
                         </div>
 
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight mb-6">
+                        <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight mb-6">
                             <span className="text-white block">Your Daily Dose of</span>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC4899] to-[#F472B6]">Berry Bliss</span>
                         </h1>
@@ -57,7 +57,7 @@ export default function Hero() {
 
                         {/* Product Placeholder */}
                         {/* Product Image */}
-                        <div className="relative w-80 h-[500px] bg-black rounded-3xl border-4 border-white/10 flex items-center justify-center transform rotate-6 hover:rotate-0 transition-transform duration-500 shadow-2xl overflow-hidden group">
+                        <div className="relative w-64 h-[400px] sm:w-80 sm:h-[500px] bg-black rounded-3xl border-4 border-white/10 flex items-center justify-center transform rotate-6 hover:rotate-0 transition-transform duration-500 shadow-2xl overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 z-0"></div>
                             <Image
                                 src="/frandy_product_img_single.png"

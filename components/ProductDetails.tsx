@@ -27,7 +27,7 @@ export default function ProductDetails({ product }: { product: any }) {
             <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start">
                 {/* Image gallery */}
                 <div className="flex flex-col-reverse">
-                    <div className="w-full aspect-w-1 aspect-h-1 bg-gray-100 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
+                    <div className="w-full aspect-w-1 aspect-h-1 bg-[#1F1D2B] rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3 border border-white/5">
                         {image ? (
                             <Image
                                 src={image.url}
@@ -46,15 +46,15 @@ export default function ProductDetails({ product }: { product: any }) {
 
                 {/* Product info */}
                 <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
-                    <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">{title}</h1>
+                    <h1 className="text-3xl font-extrabold tracking-tight text-white">{title}</h1>
                     <div className="mt-3">
                         <h2 className="sr-only">Product information</h2>
-                        <p className="text-3xl text-gummy-blue">${parseFloat(price).toFixed(2)}</p>
+                        <p className="text-3xl text-gummy-red">₹{parseFloat(price).toFixed(2)}</p>
                     </div>
 
                     <div className="mt-6">
                         <h3 className="sr-only">Description</h3>
-                        <div className="text-base text-gray-700 space-y-6" dangerouslySetInnerHTML={{ __html: description }} />
+                        <div className="text-base text-gray-300 space-y-6" dangerouslySetInnerHTML={{ __html: description }} />
                     </div>
 
                     <div className="mt-10 flex sm:flex-col1">

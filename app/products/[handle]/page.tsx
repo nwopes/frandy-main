@@ -11,7 +11,7 @@ export default async function ProductPage({ params }: { params: Promise<{ handle
     }
 
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-[var(--background)]">
             <Navbar />
             <ProductDetails product={product} />
         </main>
