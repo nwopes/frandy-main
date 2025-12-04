@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 export default function WhyChooseFrandy() {
     const features = [
         {
@@ -69,22 +71,26 @@ export default function WhyChooseFrandy() {
     return (
         <section className="bg-[var(--background)] py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-black text-white mb-4">Why Choose Frandy?</h2>
-                    <p className="text-gray-400 text-lg">Premium quality meets delicious taste</p>
-                </div>
+                <FadeIn direction="up">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-black text-white mb-4">Why Choose Frandy?</h2>
+                        <p className="text-gray-400 text-lg">Premium quality meets delicious taste</p>
+                    </div>
+                </FadeIn>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
-                        <div key={index} className="bg-[#1F1D2B] rounded-3xl p-8 border border-white/5 hover:border-gummy-red/50 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
-                            <div className="w-14 h-14 bg-pink-500/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-pink-500/30 transition-colors">
-                                {feature.customIcon}
+                        <FadeIn key={index} delay={index * 0.1}>
+                            <div className="bg-[#1F1D2B] rounded-3xl p-8 border border-white/5 hover:border-gummy-red/50 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
+                                <div className="w-14 h-14 bg-pink-500/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-pink-500/30 transition-colors">
+                                    {feature.customIcon}
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                                <p className="text-gray-400 leading-relaxed">
+                                    {feature.description}
+                                </p>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                            <p className="text-gray-400 leading-relaxed">
-                                {feature.description}
-                            </p>
-                        </div>
+                        </FadeIn>
                     ))}
                 </div>
             </div>

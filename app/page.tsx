@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import WhyChooseFrandy from "@/components/WhyChooseFrandy";
 import NutritionInfo from "@/components/NutritionInfo";
 
+import BoostHealth from "@/components/BoostHealth";
+
 export default async function Home() {
   let products = [];
   try {
@@ -29,6 +31,7 @@ export default async function Home() {
       )}
 
       <WhyChooseFrandy />
+      <BoostHealth />
       <NutritionInfo />
 
       <Footer />

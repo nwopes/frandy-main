@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 export default function Features() {
     const features = [
         {
@@ -44,16 +46,17 @@ export default function Features() {
         <div className="bg-[var(--background)] py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-wrap justify-center gap-6">
-                    {features.map((feature) => (
-                        <div
-                            key={feature.title}
-                            className="bg-[#1F1D2B] rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:-translate-y-1 hover:shadow-xl w-full sm:w-72 lg:w-80 border border-white/5"
-                        >
-                            <div className="mb-4 p-3 bg-white/10 rounded-full">
-                                {feature.icon}
+                    {features.map((feature, index) => (
+                        <FadeIn key={feature.title} delay={index * 0.2}>
+                            <div
+                                className="bg-[#1F1D2B] rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:-translate-y-1 hover:shadow-xl w-full sm:w-72 lg:w-80 border border-white/5"
+                            >
+                                <div className="mb-4 p-3 bg-white/10 rounded-full">
+                                    {feature.icon}
+                                </div>
+                                <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                             </div>
-                            <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                        </div>
+                        </FadeIn>
                     ))}
                 </div>
             </div>

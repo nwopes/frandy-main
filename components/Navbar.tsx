@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useCart } from './CartProvider';
 import { useState } from 'react';
 
+
+
 export default function Navbar() {
     const { setCartOpen, cart } = useCart();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,6 +48,8 @@ export default function Navbar() {
                             Contact
                         </Link>
                     </div>
+
+
 
 
 
