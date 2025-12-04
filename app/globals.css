@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1A1A1A;
-  /* Dark Wook Theme */
-  --foreground: #FFFFFF;
-  --gummy-red: #EC4899;
-  /* Pink */
-  --gummy-blue: #7C3AED;
-  /* Purple */
-  /* Yellow Accent */
+  --background: #13111C;
+  /* Softer Dark Purple-Grey */
+  --foreground: #F3F4F6;
+  /* Soft White */
+  --gummy-red: #F472B6;
+  /* Soft Pink */
+  --gummy-blue: #A78BFA;
+  /* Soft Purple */
+  --gummy-yellow: #FEF08A;
+  /* Soft Yellow */
 }
 
 @theme inline {

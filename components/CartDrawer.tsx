@@ -24,7 +24,7 @@ export default function CartDrawer() {
             <div className="absolute inset-0 bg-gray-500/50 backdrop-blur-sm transition-opacity" onClick={() => setCartOpen(false)}></div>
             <div className="fixed inset-y-0 right-0 max-w-full flex">
                 <div className="w-screen max-w-md">
-                    <div className="h-full flex flex-col bg-[#1A1A1A] shadow-2xl overflow-y-scroll">
+                    <div className="h-full flex flex-col bg-[var(--background)] shadow-2xl overflow-y-scroll">
 
                         {/* Header */}
                         <div className="px-6 py-6 border-b border-white/10 flex items-center justify-between">
@@ -69,11 +69,11 @@ export default function CartDrawer() {
                                                             {node.merchandise.product.title}
                                                         </h3>
                                                         <p className="mt-1 text-sm text-gummy-blue font-medium">
-                                                            ${parseFloat(node.merchandise.price.amount).toFixed(2)}
+                                                            ₹{parseFloat(node.merchandise.price.amount).toFixed(2)}
                                                         </p>
                                                     </div>
                                                     <p className="text-base font-bold text-white">
-                                                        ${(parseFloat(node.merchandise.price.amount) * node.quantity).toFixed(2)}
+                                                        ₹{(parseFloat(node.merchandise.price.amount) * node.quantity).toFixed(2)}
                                                     </p>
                                                 </div>
 
@@ -134,7 +134,7 @@ export default function CartDrawer() {
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-base font-medium text-gray-400">
                                         <p>Subtotal</p>
-                                        <p>${subtotal.toFixed(2)}</p>
+                                        <p>₹{subtotal.toFixed(2)}</p>
                                     </div>
                                     <div className="flex justify-between text-base font-medium text-gray-400">
                                         <p>Shipping</p>
@@ -142,7 +142,7 @@ export default function CartDrawer() {
                                     </div>
                                     <div className="flex justify-between text-xl font-bold text-gummy-blue mt-4 pt-4 border-t border-white/10">
                                         <p>Total</p>
-                                        <p>${subtotal.toFixed(2)}</p>
+                                        <p>₹{subtotal.toFixed(2)}</p>
                                     </div>
                                 </div>
 

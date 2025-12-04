@@ -50,7 +50,7 @@ export default function ProductCard({ product }: { product: Product }) {
     // I'll update the getProducts query in shopify.ts to fetch variants.
 
     return (
-        <div className="group relative bg-[#262626] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-white/10 overflow-hidden hover:-translate-y-1">
+        <div className="group relative bg-[#1F1D2B] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-white/5 overflow-hidden hover:-translate-y-1">
             <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-800 group-hover:opacity-75 h-64 relative">
                 {image ? (
                     <Image
@@ -74,7 +74,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 </h3>
                 <p className="mt-1 text-sm text-gray-400">Delicious & Healthy</p>
                 <div className="mt-4 flex items-center justify-between">
-                    <p className="text-xl font-extrabold text-gummy-blue">${parseFloat(price).toFixed(2)}</p>
+                    <p className="text-xl font-extrabold text-gummy-blue">₹{parseFloat(price).toFixed(2)}</p>
                     <button
                         className="px-4 py-2 bg-gummy-red text-white text-sm font-bold rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-lg hover:bg-pink-600 z-10 relative"
                         onClick={(e) => {

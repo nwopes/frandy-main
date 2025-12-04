@@ -4,6 +4,8 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import ProductGrid from "@/components/ProductGrid";
 import Footer from "@/components/Footer";
+import WhyChooseFrandy from "@/components/WhyChooseFrandy";
+import NutritionInfo from "@/components/NutritionInfo";
 
 export default async function Home() {
   let products = [];
@@ -14,7 +16,7 @@ export default async function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-[#1A1A1A]">
+    <main className="min-h-screen bg-[var(--background)]">
       <Navbar />
       <Hero />
       <Features />
@@ -25,6 +27,9 @@ export default async function Home() {
           <p className="text-xl text-gray-400">No products found. Please check your Shopify connection.</p>
         </div>
       )}
+
+      <WhyChooseFrandy />
+      <NutritionInfo />
 
       <Footer />
     </main>

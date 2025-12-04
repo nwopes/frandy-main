@@ -12,15 +12,15 @@ export default function Features() {
                 </svg>
             ),
         },
-        {
-            title: "15 Days return",
-            icon: (
-                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-            ),
-        },
+        // {
+        //     title: "15 Days return",
+        //     icon: (
+        //         <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        //             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        //             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        //         </svg>
+        //     ),
+        // },
         {
             title: "Guarantee",
             icon: (
@@ -41,13 +41,13 @@ export default function Features() {
     ];
 
     return (
-        <div className="bg-[#1A1A1A] py-12">
+        <div className="bg-[var(--background)] py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="flex flex-wrap justify-center gap-6">
                     {features.map((feature) => (
                         <div
                             key={feature.title}
-                            className="bg-[#6B46C1] rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:-translate-y-1 hover:shadow-xl"
+                            className="bg-[#1F1D2B] rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:-translate-y-1 hover:shadow-xl w-full sm:w-72 lg:w-80 border border-white/5"
                         >
                             <div className="mb-4 p-3 bg-white/10 rounded-full">
                                 {feature.icon}

@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function Hero() {
     return (
-        <div className="relative overflow-hidden bg-[#1A1A1A] min-h-[600px] flex items-center">
+        <div className="relative overflow-hidden bg-[var(--background)] min-h-[600px] flex items-center">
 
             {/* Background Waves */}
             <div className="absolute inset-0 z-0">
@@ -19,18 +21,18 @@ export default function Hero() {
                     <div className="lg:col-span-6 text-left">
                         {/* Logo/Brand */}
                         <div className="mb-8">
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                            {/* <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
                                 <span className="text-2xl font-black text-black">FW</span>
-                            </div>
+                            </div> */}
                         </div>
 
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#EC4899] mb-6" style={{ textShadow: '2px 2px 0px #000' }}>
-                            Take a Sip.<br />
-                            Enjoy the Trip.
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight mb-6">
+                            <span className="text-white block">Your Daily Dose of</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC4899] to-[#F472B6]">Berry Bliss</span>
                         </h1>
 
                         <p className="mt-4 text-lg text-yellow-400 font-medium max-w-lg leading-relaxed bg-black/50 p-6 rounded-2xl backdrop-blur-sm border border-white/10 shadow-2xl relative z-20">
-                            FRANDY is an adaptogen-infused hydration beverage featuring Lion's Mane, L-Theanine, amino acids, electrolytes, and prebiotics. It is crafted to enhance clarity, performance, and recovery without caffeine or sugar crashes.
+                            Delicious multivitamin gummies packed with 15 essential vitamins. 100% plant-based. Naturally sweetened. Zero artificial ingredients
                         </p>
 
                         <div className="mt-10">
@@ -54,14 +56,16 @@ export default function Hero() {
                         </div>
 
                         {/* Product Placeholder */}
-                        <div className="relative w-64 h-[400px] bg-gray-800 rounded-3xl border-4 border-white/20 flex items-center justify-center transform rotate-6 hover:rotate-0 transition-transform duration-500 shadow-2xl">
-                            <div className="text-center p-6">
-                                <p className="text-white font-bold text-xl mb-2">YOUR PRODUCT</p>
-                                <p className="text-gray-400 text-sm">Upload your image here</p>
-                                <div className="mt-4 w-16 h-16 bg-white/10 rounded-full mx-auto flex items-center justify-center">
-                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                                </div>
-                            </div>
+                        {/* Product Image */}
+                        <div className="relative w-80 h-[500px] bg-black rounded-3xl border-4 border-white/10 flex items-center justify-center transform rotate-6 hover:rotate-0 transition-transform duration-500 shadow-2xl overflow-hidden group">
+                            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 z-0"></div>
+                            <Image
+                                src="/frandy_product_img_single.png"
+                                alt="Frandy Berry Blast"
+                                fill
+                                className="object-cover z-10 group-hover:scale-105 transition-transform duration-700"
+                                priority
+                            />
                         </div>
                     </div>
 
